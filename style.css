@@ -1,50 +1,104 @@
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e8f1f5;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
+/* Header styling */
 header {
-    background-color: #333;
+    background-color: #1a73e8;
     color: #fff;
-    padding: 20px;
+    padding: 50px 20px;
     text-align: center;
+    font-size: 1.5em;
 }
 
+/* Navigation styling */
 nav ul {
-    background-color: #444;
-    padding: 10px;
+    background-color: #2c3e50;
+    padding: 15px;
     list-style-type: none;
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
 }
 
+nav ul li a:hover {
+    color: #1a73e8;
+}
+
+/* Highlight active page */
+nav ul li a.active {
+    color: #1a73e8; /* Color to indicate the active page */
+    border-bottom: 2px solid #1a73e8;
+}
+
+/* Section styling */
 section {
-    padding: 20px;
-    margin: 20px;
+    padding: 50px;
+    margin: 20px auto;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
 }
 
+/* Button styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #1a73e8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #60686e; /* Darker shade on hover */
+}
+
+/* Footer styling */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #333;
+    padding: 15px;
+    background-color: #686c72;
     color: #fff;
-    position: fixed;
+    position: relative; /* Changed to relative for better footer placement */
     width: 100%;
-    bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items on mobile */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust margin for stacked items */
+    }
+
+    section {
+        padding: 30px; /* Reduced padding on smaller screens */
+    }
+
+    header {
+        font-size: 1.2em; /* Adjust header size for smaller screens */
+    }
 }
